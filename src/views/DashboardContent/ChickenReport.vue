@@ -139,7 +139,7 @@ export default {
       try {
         const filter = `?start_date=${this.startDate}&end_date=${this.endDate}&period_type=${this.periodType}`;
         const { data } = await axiosClient().get(
-          `${process.env.VUE_APP_API_BASE_URL}/chicken-weight-log/${this.chicken.id}${filter}`
+          `/chicken-weight-log/${this.chicken.id}${filter}`
         );
         this.chartDataChickenWeight = data;
       } catch (e) {
@@ -161,7 +161,7 @@ export default {
       try {
         const filter = `?start_date=${this.startDate}&end_date=${this.endDate}&period_type=${this.periodType}`;
         const { data } = await axiosClient().get(
-          `${process.env.VUE_APP_API_BASE_URL}/nest-weight-log/${this.chicken.id}${filter}`
+          `/nest-weight-log/${this.chicken.id}${filter}`
         );
         this.chartDataEggWeight = data;
       } catch (e) {

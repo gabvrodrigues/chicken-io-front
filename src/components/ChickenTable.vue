@@ -93,7 +93,7 @@ export default {
   methods: {
     getChickens() {
       axiosClient()
-        .get(`${process.env.VUE_APP_API_BASE_URL}/chickens`)
+        .get(`/chickens`)
         .then((response) => {
           this.chickens = response.data.chickens;
         })
